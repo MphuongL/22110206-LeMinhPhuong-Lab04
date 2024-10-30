@@ -30,8 +30,8 @@ public class CategoryController {
 	
 	@RequestMapping("")
 	public String all(Model model) {
-		List<Category> list = categoryService.findAll();
-		model.addAttribute("list", list);
+		List<Category> categories = categoryService.findAll();
+		model.addAttribute("categories", categories);
 		return "admin/list";
 	}
 	
